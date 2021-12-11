@@ -1,4 +1,4 @@
-<div *ngFor="let connection of connections; let i = index">
+<div *ngFor="let connection of connections">
   <app-item [itemName]="connection.name" [icon]="user" (event)="openItem($event)" [doesHavePermissions]="true"></app-item>
   <div *ngFor="let db of databases">
     <app-tree *ngIf="isItemShown(connection.name)" [userId]="connection.userId" [data]="db" [depth]="1"></app-tree>

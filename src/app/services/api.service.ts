@@ -20,6 +20,7 @@ export class ApiService {
     return this.findRecursive(data, parentId);
   }
 
+  // in order to not get all data at once I look only for the immediate children of the parent every time there's a click on the parent.
   findRecursive(children, parentId) {
       for (const item of children) {
         if (item.id === parentId) {

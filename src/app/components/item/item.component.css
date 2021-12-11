@@ -6,3 +6,7 @@
 .arrowRight {
   color: gray !important;
 }
+
+.icon {
+  padding-right: 0.5rem;
+}

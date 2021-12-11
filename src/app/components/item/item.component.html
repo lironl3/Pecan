@@ -1,0 +1,9 @@
+<div [ngStyle]="{'margin-left': depth + 'rem'}">
+    <span (click)="this.click()">
+      <fa-icon class="arrow arrowRight" [icon]="arrowRight" *ngIf="!clicked"></fa-icon>
+      <fa-icon class="arrow" [icon]="arrowDown" *ngIf="clicked"></fa-icon>
+    </span>
+  <span>
+    <fa-icon [icon]="icon"></fa-icon>
+    {{itemName}}</span>
+</div>

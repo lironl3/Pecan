@@ -1,0 +1,6 @@
+  <app-item [itemName]="data.name" [icon]="getIcon()" (event)="clickItem($event, data.name)"
+            [doesHavePermissions]="doesHavePermissions(userId)" [depth]="depth"></app-item>
+
+  <div *ngFor="let child of children">
+    <app-tree *ngIf="isItemShown(data.name)" [userId]="userId" [data]="child" [depth]="depth + 1"></app-tree>
+  </div>
